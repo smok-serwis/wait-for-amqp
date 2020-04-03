@@ -11,4 +11,4 @@ python:
 install:
   - python setup.py install
 script:
-  - wait-for-amqp
+  - wait-for-amqp localhost 30 guest guest /
