@@ -8,7 +8,7 @@ from coolamqp.clustering import Cluster
 import sys
 
 
-def wait_for_rabbitmq(host_name, wait_timeout, login, password, virtual_host):
+def wait_for_amqp(host_name, wait_timeout, login, password, virtual_host):
     start_at = time.time()
     wait_println_counter = 0
     node_def = NodeDefinition(host=host_name, user=login, password=password, virtual_host=virtual_host)
@@ -49,7 +49,7 @@ def run():
     except ValueError:
         print_banner()
 
-    wait_for_rabbitmq(hostname, timeout, login, password, virtual_host)
+    wait_for_amqp(hostname, timeout, login, password, virtual_host)
 
 
 if __name__ == '__main__':

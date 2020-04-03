@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     keywords=['amqp', 'ci', 'utility'],
     version="1.0",
-    install_requires=['coolamqp'],
+    install_requires=['coolamqp>=1.0.2'],
     packages=[
         'wait_for_amqp',
     ],
